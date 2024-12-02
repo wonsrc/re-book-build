@@ -11,7 +11,8 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@Repository
+
+@Repository("BookJpaRepository")
 public interface BookRepository extends JpaRepository<Book, String> {
 
     // 평점 순 상위 3

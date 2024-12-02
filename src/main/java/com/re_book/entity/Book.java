@@ -17,6 +17,7 @@ import java.util.List;
 @Table(name = "tbl_books")
 public class Book {
 
+
     @Id
     @GeneratedValue(strategy = GenerationType.UUID) // UUID 생성 전략
     @Column(name="book_uuid")
