@@ -6,7 +6,7 @@ services:
       MYSQL_ROOT_PASSWORD: mysql
       MYSQL_DATABASE: wwww
     ports:
-      - "3307:3306"
+      - "3306:3306"
     healthcheck:
       test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
       interval: 30s
@@ -17,7 +17,7 @@ services:
       - app-network
 
   redis:
-    image: redis:latest
+    image: redis:alpine
     container_name: redis-container
     ports:
       - "6379:6379"
@@ -30,7 +30,7 @@ services:
     ports:
       - "8181:8181"
     environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://mysql-container:3307/wwww
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql-container:3306/wwww
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: mysql
     depends_on:

@@ -7,12 +7,10 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 
-@Repository("BookJpaRepository")
 public interface BookRepository extends JpaRepository<Book, String> {
 
     // 평점 순 상위 3
