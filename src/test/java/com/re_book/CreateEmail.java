@@ -9,13 +9,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-@SpringBootTest
+
 public class CreateEmail {
 
-    @Autowired
-    MemberRepository memberRepository;
-    @Autowired
-    private PasswordEncoder encoder;
+//    @Autowired
+//    MemberRepository memberRepository;
+//    @Autowired
+//    private PasswordEncoder encoder;
 
 //    @Test
 //    @DisplayName("이메일생성")
