@@ -29,7 +29,7 @@ jobs:
         run: |
           docker-compose -f docker-compose.yml up --build -d
 
-      # 5. 확인 (컨테이너가 실행되고 있는지 확인하는 명령어 추가 가능)
+      # 5. 확인 (컨테이너가 실행되고 있는지 확인하는 명령어 추가 가능) 가능
       - name: Verify containers are running
         run: |
           docker ps
