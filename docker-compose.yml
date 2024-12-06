@@ -6,17 +6,21 @@ services:
       - "6379:6379"
     networks:
       - app-network
+    healthcheck:
+      test: ["CMD-SHELL", "redis-cli ping"]
 
   spring-app:
-    image: chani999/re_book:latest
-    # build: .
+    image: wonsrc/re-book-deploy:latest
     container_name: spring-app
     ports:
       - "8181:8181"
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://re-book-db.cl0qk0k6q3ee.ap-northeast-2.rds.amazonaws.com:3306/wwww
       SPRING_DATASOURCE_USERNAME: root
-      SPRING_DATASOURCE_PASSWORD: qwer1234
+      SPRING_DATASOURCE_PASSWORD: Rebook1234
+    depends_on:
+      redis:
+        condition: service_healthy
     networks:
       - app-network
 
