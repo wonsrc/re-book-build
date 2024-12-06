@@ -49,6 +49,8 @@ jobs:
             echo "Docker login..."
             docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_PASSWORD }}
             
+            cd rebook
+            
             echo "Stopping existing container..."
             docker-compose down || true
             # 기존에 실행 중인 도커 컨테이너를 중지합니다.
