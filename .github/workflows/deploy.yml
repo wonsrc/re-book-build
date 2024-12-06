@@ -65,4 +65,4 @@ jobs:
 
             echo "Starting new container..."
             docker-compose up -d 
-            # docker-compose를 사용하여 새 컨테이너를 백그라운드 모드에서 실행합니다.
+            # docker-compose를 사용하여 새 컨테이너를 백그라운드 모드에서 실행합니다.!
