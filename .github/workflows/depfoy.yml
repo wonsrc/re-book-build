@@ -56,3 +56,5 @@ jobs:
             docker-compose up -d
             # 4. 실행 상태 확인
             docker ps
+            
+            #연습
