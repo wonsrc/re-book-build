@@ -33,7 +33,7 @@ public class HomeController {
         response.put("recommendedByLikeCount", recommendedByLikeCount);
 
         CommonResDto resDto
-                = new CommonResDto(HttpStatus.OK, "홈화면 출력 완료", response);
+                = new CommonResDto(HttpStatus.OK, "홈화면 출력 완료!", response);
 
         return new ResponseEntity<>(resDto, HttpStatus.OK); // 성공 시 OK 상태 코드와 함께 반환
     }
